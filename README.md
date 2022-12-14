@@ -1,2 +1,3 @@
 # CRUD Ativos da Empresa<br/>
-ss
+Projetinho para gerenciar os ativos da empresa, ativos como: máquinas, equipamentos, computadores, mesas...<br/>
+s
