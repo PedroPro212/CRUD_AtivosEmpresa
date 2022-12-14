@@ -2,6 +2,7 @@
 Projetinho para gerenciar os ativos da empresa, ativos como: máquinas, equipamentos, computadores, mesas...<br/>
 
 ## Tecnologias utilizadas:<br/>
+- Editor de código: VisualStudio<br/>
 - Tipo de projeto: WebForms<br/>
 - Linguagem de marcação: HTML<br/>
 - Linguagem de estilização: Css<br/>
