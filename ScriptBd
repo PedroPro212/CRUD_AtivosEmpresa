@@ -1,0 +1,45 @@
+CREATE DATABASE ativos;
+USE ativos;
+
+CREATE TABLE supervisor(
+	id int primary key auto_increment not null,
+    nome varchar(100)
+);
+
+CREATE TABLE setor(
+	id int primary key auto_increment not null,
+    descricao varchar(100),
+    responsavel int,
+    
+    foreign key (responsavel) references supervisor(id) 
+);
+
+CREATE TABLE cidades(
+	id int primary key auto_increment not null,
+    nome varchar(100)
+);
+
+CREATE TABLE ativos(
+	id int primary KEY auto_increment NOT null,
+    descricao varchar(200),
+    valor double,
+    quantidade int,
+    cidade int,
+    data_cadastrado date,
+    setor int,
+    
+    foreign key (setor) references setor(id),
+    foreign key (cidade) references cidades(id)
+);
+
+INSERT INTO supervisor VALUES(NULL, "Paulo Roberto Patara");
+INSERT INTO supervisor VALUES(NULL, "Pedro Henrique Oliveira");
+
+INSERT INTO setor VALUES(NULL, "Finanças", 1);
+INSERT INTO setor VALUES(NULL, "Corte", 1);
+
+INSERT INTO cidades VALUES(NULL, "Paraisópolis MG");
+INSERT INTO cidades VALUES(NULL, "Conceição dos Ouros");
+INSERT INTO cidades VALUES(NULL, "Espírito Santo do Pinhal");
+
+INSERT INTO ativos VALUES(NULL, "Computador DELL 3050", 5.300, 1, 1, "2022-12-12", 1);
