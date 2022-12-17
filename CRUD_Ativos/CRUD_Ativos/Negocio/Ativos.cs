@@ -94,6 +94,7 @@ namespace CRUD_Ativos.Negocio
 
         public bool Update(Classes.Ativos ativos)
         {
+            
             try
             {
                 connection.Open();

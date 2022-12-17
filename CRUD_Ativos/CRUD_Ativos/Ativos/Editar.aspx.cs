@@ -54,13 +54,15 @@ namespace CRUD_Ativos.Ativos
                     SiteMaster.AlertPersonalizado(this, "É necessário todos os campoes estarem preenchidos!");
                 }
                 else
-                {                    
-                    var ativo = new Classes.Ativos();
-                    ativo.Descricao = txtDescricao.Text;
-                    ativo.Valor = Convert.ToDouble(txtValor.Text);
-                    ativo.Quantidade = Convert.ToInt32(txtQts.Text);
-                    ativo.Setor = ddlSetor.SelectedValue;
-                    ativo.Cidade = ddlCidade.SelectedValue;
+                {
+                    var ativo = new Classes.Ativos
+                    {
+                        Descricao = txtDescricao.Text,
+                        Valor = Convert.ToDouble(txtValor.Text),
+                        Quantidade = Convert.ToInt32(txtQts.Text),
+                        Setor = ddlSetor.SelectedValue,
+                        Cidade = ddlCidade.SelectedValue
+                    };
                     new Negocio.Ativos().Update(ativo);
 
                     SiteMaster.AlertPersonalizado(this, "Alterado com sucesso");
